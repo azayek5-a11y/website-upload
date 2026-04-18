@@ -36,6 +36,8 @@ img { max-width: 100%; display: block; }
 .hero-grid, .two-col, .agency-grid, .contact-card, .two-card-grid { display: grid; gap: 2rem; }
 .hero-grid { grid-template-columns: 1.15fr .85fr; align-items: start; }
 .two-col { grid-template-columns: .9fr 1.1fr; }
+.about-grid { display: grid; grid-template-columns: 280px 1fr 1fr; gap: 2.5rem; align-items: start; }
+.headshot-img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; }
 .two-card-grid { grid-template-columns: 1fr 1fr; }
 .eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .22em; font-weight: 700; color: #64748b; }
 .eyebrow-dark { color: #cbd5e1; }
@@ -95,7 +97,8 @@ p { margin: 1rem 0 0; color: var(--muted); }
 .contact-list { display: grid; gap: .8rem; }
 .contact-item { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.08); color: #e2e8f0; padding: 1rem; }
 @media (max-width: 980px) {
-  .hero-grid, .two-col, .two-card-grid, .agency-grid, .contact-card { grid-template-columns: 1fr; }
+  .hero-grid, .two-col, .two-card-grid, .agency-grid, .contact-card, .about-grid { grid-template-columns: 1fr; }
+  .headshot-img { aspect-ratio: 4 / 3; }
   .client-grid, .demo-grid, .testimonial-grid, .stats-grid { grid-template-columns: 1fr; }
   .service-grid, .info-grid { grid-template-columns: 1fr; }
   .section-head, .nav-wrap { align-items: start; flex-direction: column; }
