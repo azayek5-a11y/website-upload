@@ -14,6 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alexander Zayek | Voice Actor" />
+    <meta property="og:description" content="Alexander Zayek delivers clean, modern voiceover for brands, agencies, and production teams." />
+    <meta property="og:image" content="https://azayek5-a11y.github.io/website-upload/assets/headshot.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alexander Zayek | Voice Actor" />
+    <meta name="twitter:description" content="Alexander Zayek delivers clean, modern voiceover for brands, agencies, and production teams." />
+    <meta name="twitter:image" content="https://azayek5-a11y.github.io/website-upload/assets/headshot.jpg" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -56,19 +64,26 @@
               <a class="button button-light" href="#agency">View Representation</a>
             </div>
             <div class="stats-grid">
-              <div class="stat-card"><strong>10+</strong><span>Years of Experience</span></div>
-              <div class="stat-card"><strong>100s</strong><span>Clients Served</span></div>
-              <div class="stat-card"><strong>1000s</strong><span>Projects Voiced</span></div>
+              <div class="stat-card" data-count="10" data-suffix="+"><strong>10+</strong><span>Years of Experience</span></div>
+              <div class="stat-card" data-count="100" data-suffix="s"><strong>100s</strong><span>Clients Served</span></div>
+              <div class="stat-card" data-count="1000" data-suffix="s"><strong>1000s</strong><span>Projects Voiced</span></div>
             </div>
           </div>
 
           <div class="card featured-card">
             <div class="eyebrow">Featured Reel</div>
             <h2>Commercial Demo</h2>
-            <div class="audio-wrap">
-              <audio controls preload="metadata">
+            <div class="audio-player">
+              <audio id="main-audio" preload="metadata">
                 <source src="assets/commercial-demo.mp3" type="audio/mpeg" />
               </audio>
+              <button class="ap-btn" aria-label="Play">
+                <svg width="12" height="15" viewBox="0 0 12 15" fill="currentColor"><path d="M0 0l12 7.5L0 15V0z"/></svg>
+              </button>
+              <div class="ap-progress" role="slider" aria-label="Playback progress">
+                <div class="ap-fill"></div>
+              </div>
+              <span class="ap-time">0:00</span>
             </div>
             <div class="bullet-list">
               <div class="bullet-item">Natural, conversational commercial sound</div>
@@ -133,38 +148,44 @@
           <div class="video-grid">
             <div class="card video-card">
               <h3>DreamPack</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/7HcrUkpjt5Q" title="DreamPack" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="7HcrUkpjt5Q">
+                <img src="https://img.youtube.com/vi/7HcrUkpjt5Q/hqdefault.jpg" alt="DreamPack" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play DreamPack"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
             <div class="card video-card">
               <h3>SparkHouse</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/N90AnSn3eAw" title="SparkHouse" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="N90AnSn3eAw">
+                <img src="https://img.youtube.com/vi/N90AnSn3eAw/hqdefault.jpg" alt="SparkHouse" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play SparkHouse"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
             <div class="card video-card">
               <h3>Pizza Hut</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/eo2Lt1FQoxE" title="Pizza Hut" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="eo2Lt1FQoxE">
+                <img src="https://img.youtube.com/vi/eo2Lt1FQoxE/hqdefault.jpg" alt="Pizza Hut" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play Pizza Hut"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
             <div class="card video-card">
               <h3>VAF</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/cqpAVr1ZKnI" title="VAF" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="cqpAVr1ZKnI">
+                <img src="https://img.youtube.com/vi/cqpAVr1ZKnI/hqdefault.jpg" alt="VAF" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play VAF"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
             <div class="card video-card">
               <h3>Zombie Army VR</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/zfdRyTMRuXU" title="Zombie Army VR" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="zfdRyTMRuXU">
+                <img src="https://img.youtube.com/vi/zfdRyTMRuXU/hqdefault.jpg" alt="Zombie Army VR" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play Zombie Army VR"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
             <div class="card video-card">
               <h3>San Francisco Symphony</h3>
-              <div class="video-wrap">
-                <iframe src="https://www.youtube-nocookie.com/embed/GOdU_IZPMzY" title="San Francisco Symphony" allowfullscreen loading="lazy"></iframe>
+              <div class="video-wrap video-facade" data-id="GOdU_IZPMzY">
+                <img src="https://img.youtube.com/vi/GOdU_IZPMzY/hqdefault.jpg" alt="San Francisco Symphony" loading="lazy" />
+                <button class="play-btn-facade" aria-label="Play San Francisco Symphony"><svg width="18" height="22" viewBox="0 0 18 22" fill="currentColor"><path d="M0 0l18 11L0 22V0z"/></svg></button>
               </div>
             </div>
           </div>
@@ -275,6 +296,8 @@
       </section>
     </main>
 
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
     <footer class="site-footer">
       <div class="container footer-wrap">
         <div class="footer-copy">&copy; 2026 Alexander Zayek. All rights reserved.</div>
@@ -285,7 +308,7 @@
       </div>
     </footer>
     <script>
-      // Hamburger nav
+      // --- Hamburger nav ---
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.nav');
       toggle.addEventListener('click', () => {
@@ -299,11 +322,95 @@
         toggle.setAttribute('aria-expanded', false);
       }));
 
-      // Scroll fade-in
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      // --- Header scroll shadow ---
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+
+      // --- Scroll spy (active nav) ---
+      const sections = document.querySelectorAll('main section[id]');
+      const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const link = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+            if (link) link.classList.add('active');
+          }
+        });
+      }, { threshold: 0.35 });
+      sections.forEach(s => spyObserver.observe(s));
+
+      // --- Scroll fade-in ---
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } });
       }, { threshold: 0.08 });
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+      // --- Stat counter animation ---
+      function animateStat(el) {
+        const strong = el.querySelector('strong');
+        const target = +el.dataset.count;
+        const suffix = el.dataset.suffix || '';
+        const duration = 1200;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          strong.textContent = Math.floor(eased * target) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animateStat(e.target); statObserver.unobserve(e.target); } });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.stat-card[data-count]').forEach(el => statObserver.observe(el));
+
+      // --- Back to top ---
+      const btt = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', () => {
+        btt.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // --- Custom audio player ---
+      const audio = document.getElementById('main-audio');
+      const apBtn = document.querySelector('.ap-btn');
+      const apFill = document.querySelector('.ap-fill');
+      const apTime = document.querySelector('.ap-time');
+      const apProgress = document.querySelector('.ap-progress');
+      const playIcon = '<svg width="12" height="15" viewBox="0 0 12 15" fill="currentColor"><path d="M0 0l12 7.5L0 15V0z"/></svg>';
+      const pauseIcon = '<svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor"><rect x="0" y="0" width="4" height="14"/><rect x="8" y="0" width="4" height="14"/></svg>';
+      function fmtTime(s) { return `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`; }
+      apBtn.addEventListener('click', () => { audio.paused ? audio.play() : audio.pause(); });
+      audio.addEventListener('play', () => apBtn.innerHTML = pauseIcon);
+      audio.addEventListener('pause', () => apBtn.innerHTML = playIcon);
+      audio.addEventListener('ended', () => apBtn.innerHTML = playIcon);
+      audio.addEventListener('timeupdate', () => {
+        const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+        apFill.style.width = pct + '%';
+        apTime.textContent = fmtTime(audio.currentTime);
+      });
+      apProgress.addEventListener('click', (e) => {
+        const rect = apProgress.getBoundingClientRect();
+        audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+      });
+
+      // --- Video facade (click to load iframe) ---
+      document.querySelectorAll('.video-facade').forEach(facade => {
+        facade.querySelector('button').addEventListener('click', () => {
+          const id = facade.dataset.id;
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('loading', 'lazy');
+          facade.innerHTML = '';
+          facade.appendChild(iframe);
+          facade.classList.remove('video-facade');
+        });
+      });
     </script>
   </body>
 </html>
