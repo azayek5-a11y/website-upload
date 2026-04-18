@@ -90,14 +90,10 @@ p { margin: 1rem 0 0; color: var(--muted); }
 .service-grid { grid-template-columns: repeat(2, 1fr); margin-top: 1rem; }
 .testimonial-card strong { display: block; margin-top: 1rem; }
 .stars {
-  display: inline-block;
   font-size: 1.35rem;
   letter-spacing: .1em;
-  background: linear-gradient(160deg, #fde68a 0%, #f59e0b 55%, #d97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 1px 3px rgba(245,158,11,.35));
+  color: #f59e0b;
+  text-shadow: 0 0 8px rgba(245,158,11,.5), 0 2px 4px rgba(180,83,9,.25);
   margin-bottom: .5rem;
 }
 .agency-grid { grid-template-columns: .8fr 1.2fr; align-items: center; }
