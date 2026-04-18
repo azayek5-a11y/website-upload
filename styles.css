@@ -105,6 +105,23 @@ p { margin: 1rem 0 0; color: var(--muted); }
 .contact-card p { color: #cbd5e1; }
 .contact-list { display: grid; gap: .8rem; }
 .contact-item { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.08); color: #e2e8f0; padding: 1rem; }
+/* Hamburger toggle */
+.nav-toggle {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px; z-index: 30;
+}
+.nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .25s ease; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Scroll fade-in */
+.fade-in { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Client logo polish */
+.client-logo { mix-blend-mode: multiply; }
+
 .site-footer { border-top: 1px solid var(--border); padding: 1.75rem 0; background: var(--bg-soft); }
 .footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .footer-copy { color: var(--muted); font-size: .9rem; }
@@ -116,5 +133,15 @@ p { margin: 1rem 0 0; color: var(--muted); }
   .headshot-img { aspect-ratio: 4 / 3; }
   .client-grid, .demo-grid, .testimonial-grid, .stats-grid, .video-grid { grid-template-columns: 1fr; }
   .service-grid, .info-grid { grid-template-columns: 1fr; }
-  .section-head, .nav-wrap { align-items: start; flex-direction: column; }
+  .section-head { align-items: start; flex-direction: column; }
+  .nav-toggle { display: flex; }
+  .nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: .25rem; padding: 1rem;
+    background: rgba(248,250,252,.98); border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+  }
+  .nav.open { display: flex; }
+  .nav .button { text-align: center; }
+  .site-header { position: sticky; }
 }

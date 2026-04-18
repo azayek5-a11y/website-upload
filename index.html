@@ -24,6 +24,9 @@
           <div class="brand">Alexander Zayek</div>
           <div class="brand-sub">Voice Actor</div>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="nav">
           <a href="#demos">Demos</a>
           <a href="#services">Services</a>
@@ -76,7 +79,7 @@
         </div>
       </section>
 
-      <section class="section section-border">
+      <section class="section section-border fade-in">
         <div class="container about-grid">
           <div>
             <img src="assets/headshot.jpg" alt="Alexander Zayek" class="headshot-img" />
@@ -121,7 +124,7 @@
         </div>
       </section>
 
-      <section id="demos" class="section section-alt section-border">
+      <section id="demos" class="section section-alt section-border fade-in">
         <div class="container">
           <div class="video-section-head">
             <div class="eyebrow">Featured Work</div>
@@ -168,7 +171,7 @@
         </div>
       </section>
 
-      <section id="services" class="section section-border">
+      <section id="services" class="section section-border fade-in">
         <div class="container two-card-grid">
           <div class="card">
             <div class="eyebrow">Studio Specs</div>
@@ -197,7 +200,7 @@
         </div>
       </section>
 
-      <section class="section section-alt section-border">
+      <section class="section section-alt section-border fade-in">
         <div class="container">
           <div class="eyebrow">Testimonials</div>
           <h2>Client feedback</h2>
@@ -218,7 +221,7 @@
         </div>
       </section>
 
-      <section id="agency" class="section section-border">
+      <section id="agency" class="section section-border fade-in">
         <div class="container">
           <div class="card agency-card">
             <div class="agency-grid">
@@ -246,7 +249,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact-section">
+      <section id="contact" class="section contact-section fade-in">
         <div class="container">
           <div class="contact-card">
             <div>
@@ -281,5 +284,26 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Hamburger nav
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      }));
+
+      // Scroll fade-in
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
