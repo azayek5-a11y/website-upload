@@ -78,7 +78,7 @@ p { margin: 1rem 0 0; color: var(--muted); }
 .demo-grid, .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
 .demo-card p, .testimonial-card p { min-height: 5rem; }
 .coming-soon { padding: 1rem; margin-top: 1.25rem; color: var(--muted); }
-.video-section-head { margin-top: 3rem; margin-bottom: 1.5rem; }
+.video-section-head { margin-bottom: 1.5rem; }
 .video-section-head h2 { margin-top: .5rem; }
 .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .video-card h3 { margin-bottom: 1rem; }
