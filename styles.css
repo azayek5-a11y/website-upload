@@ -73,6 +73,8 @@ p { margin: 1rem 0 0; color: var(--muted); }
 .bullet-list { display: grid; gap: .8rem; margin-top: 1.25rem; }
 .bullet-item { padding: .95rem 1rem; background: var(--white); }
 .client-grid { grid-template-columns: repeat(3, 1fr); margin-top: 1rem; }
+.client-pill { align-items: center; text-align: center; justify-content: center; }
+.client-logo { max-height: 44px; width: auto; max-width: 100%; object-fit: contain; }
 .pill-card { padding: 1rem; display: flex; flex-direction: column; gap: .3rem; }
 .section-head { display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: 1.5rem; }
 .demo-grid, .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
